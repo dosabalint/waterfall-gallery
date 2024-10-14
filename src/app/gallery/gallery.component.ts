@@ -49,8 +49,6 @@ export class GalleryComponent implements OnInit {
         columnAspectRatioSums[0] <= columnAspectRatioSums[1] ? 0 : 1;
 
       this.columns[shorterColumnIndex].push(image);
-      console.log(columnAspectRatioSums);
-      console.log(JSON.stringify(this.columns, null, 2));
     };
 
     const loadAndAddImage = async () => {
