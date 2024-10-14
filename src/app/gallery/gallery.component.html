@@ -1,0 +1,7 @@
+<div class="gallery-grid">
+  <div *ngFor="let image of images; let i = index" class="image-container">
+    <img [src]="image" [alt]="'Random image ' + (i + 1)" />
+    <div class="overlay"></div>
+    <div class="image-number">{{ i + 1 }}</div>
+  </div>
+</div>
