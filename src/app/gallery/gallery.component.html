@@ -1,7 +1,17 @@
 <div class="gallery-grid">
-  <div *ngFor="let image of images; let i = index" class="image-container">
-    <img [src]="image" [alt]="'Random image ' + (i + 1)" />
-    <div class="overlay"></div>
-    <div class="image-number">{{ i + 1 }}</div>
+  <div
+    *ngFor="let column of columns; let columnIndex = index"
+    class="gallery-column"
+  >
+    <div *ngFor="let image of column; let i = index" class="image-container">
+      <img
+        [src]="image.src"
+        [alt]="'Image ' + (columnIndex * columns[0].length + i + 1)"
+      />
+      <div class="overlay"></div>
+      <div class="image-number">
+        {{ image.index }}
+      </div>
+    </div>
   </div>
 </div>
